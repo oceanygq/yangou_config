@@ -12,6 +12,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
 zuul:
   prefix: "/yangou"
   ignored-services: "*"
@@ -30,6 +33,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: gateway-9528.com
+    prefer-ip-address: true
 zuul:
   prefix: "/yangou"
   ignored-services: "*"
