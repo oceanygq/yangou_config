@@ -17,7 +17,7 @@ eureka:
     instance-id: gateway-9527.com
     prefer-ip-address: true
 zuul:
-  prefix: "/aigou"
+  prefix: "/yangou"
   ignored-services: "*"
   host:
       connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
@@ -46,7 +46,7 @@ eureka:
     instance-id: gateway-9528.com
     prefer-ip-address: true
 zuul:
-  prefix: "/aigou"
+  prefix: "/yangou"
   ignored-services: "*"
   host:
     connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
