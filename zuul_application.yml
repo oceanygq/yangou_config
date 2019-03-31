@@ -23,8 +23,6 @@ zuul:
     plat.path: /plat/**
     plat.serviceId: product-service
     plat.path: /product/**
-
-
 ---
 server:
   port: 9528
