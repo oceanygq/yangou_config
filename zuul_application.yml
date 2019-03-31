@@ -1,6 +1,7 @@
 spring:
   profiles:
-    active:dev
+    active: dev
+
 ---
 server:
   port: 9527
@@ -16,13 +17,20 @@ eureka:
     instance-id: gateway-9527.com
     prefer-ip-address: true
 zuul:
-  prefix: "/yangou"
+  prefix: "/aigou"
   ignored-services: "*"
+  host:
+      connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
+      socket-timeout-millis: 60000   #socket超时
   routes:
     plat.serviceId: plat-service
     plat.path: /plat/**
     product.serviceId: product-service
     product.path: /product/**
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
 ---
 server:
   port: 9528
@@ -38,10 +46,16 @@ eureka:
     instance-id: gateway-9528.com
     prefer-ip-address: true
 zuul:
-  prefix: "/yangou"
+  prefix: "/aigou"
   ignored-services: "*"
+  host:
+    connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
+    socket-timeout-millis: 60000   #socket超时
   routes:
     plat.serviceId: plat-service
     plat.path: /plat/**
-    product.serviceId: product-service-test
+    product.serviceId: product-service
     product.path: /product/**
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
