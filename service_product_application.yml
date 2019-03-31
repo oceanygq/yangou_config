@@ -20,6 +20,7 @@ eureka:
 mybatis-plus:
   mapper-locations: classpath:cn/itsource/yangou/mapper/*Mapper.xml
   type-aliases-package: cn.itsource.yangou.domain,cn.itsource.yangou.query
+
 ---
 server:
   port: 8004
