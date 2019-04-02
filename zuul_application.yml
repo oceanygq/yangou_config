@@ -27,6 +27,8 @@ zuul:
     plat.path: /plat/**
     product.serviceId: product-service
     product.path: /product/**
+    common.serviceId: common-privoder
+    common.path: /common/**
 ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 10000
@@ -56,6 +58,8 @@ zuul:
     plat.path: /plat/**
     product.serviceId: product-service
     product.path: /product/**
+    common.serviceId: common-privoder
+    common.path: /common/**
 ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 10000
